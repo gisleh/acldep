@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Sole purpose is to demonstrate a minor issue in ACL.  See Admin/Help/ACL dependency test for details.
+  */
+
+
+/**
+ * Implements hook_help().
+ */
+function acldep_help($section) {
+  switch ($section) {
+    case 'admin/help#acldep':
+      $output = '<h3>' . t('About ACL dependency test') . '</h3><p>' . t('The sole purpose of this module is to document and reproduce a minor issue with the ACL module.') . '</p>';
+      $output .= '<p>' . t('To reproduce the following warning: &#8220;<tt>Warning: Invalid argument supplied for foreach() in element_children() (line 6370 of /hom/inf5270/www_docs/diw/gruppe01/includes/common.inc).</tt>&#8221; &ndash; do <em>not</em> enable the ACL module prior to enabling this module. Just enable this and wait for Drupal to automatically enable it as a dependency.') . '</p>';
+      return $output;
+  }
+}

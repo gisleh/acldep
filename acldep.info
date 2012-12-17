@@ -1,0 +1,6 @@
+name = ACL dependency test
+description = To reproduce problem, do *not* enable the ACL module prior to enabling this.
+core = 7.x
+package = Access control
+dependencies[] = acl
+
